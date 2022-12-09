@@ -1,0 +1,9 @@
+<app-add-task (onAddTask)="addTask($event)"></app-add-task
+><!-- We are passing a property of task which is equal to individual task-->
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onDeleteTask)="deleteTask(task)"
+  (onToggleReminder)="toggleReminder(task)"
+>
+</app-task-item>
